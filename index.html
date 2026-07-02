@@ -116,7 +116,7 @@
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // Optional: Stop observing once revealed so it doesn't out and in again
+                // Stop observing once revealed so it doesn't out and in again
                 observer.unobserve(entry.target);
             }
         });
