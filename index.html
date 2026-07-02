@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rushaan Saba | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sleek, frosted-glass navigation-->
+    <nav class="navbar">
+        <span class="logo">RS.</span>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#focus">Focus</a></li>
+            <li><a href="#experience">Experience</a></li> 
+            <li><a href="#contact">Contacts</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+    <div class="hero-text reveal">
+        <h1>Rushaan Saba.</h1>
+        <h2>Software Engineer | Web Developer | Tech Enthusiast</h2>
+        <p>Building the foundation for tomorrow's intelligent systems.</p>
+    </div>
+</header>
+
+<!-- "Projects" Replaced with "Current Focus" -->
+<section id="focus" class="section dark-section">
+    <div class="section-content reveal">
+        <h3>Currently Building.</h3>
+        <p class="subtitle">Focusing on foundational skills and upcoming projects.</p>
+
+        <div class="grid">
+            <div class="card reveal">
+                <h4>AI & Machine Learning</h4>
+                <p>Exploring complex data structures and automation scripts.</p>
+            </div>
+            <div class="card reveal">
+                <h4>Web Development</h4>
+                <p>Crafting responsive, minimalist interfaces with modern web technologies.</p>
+            </div>
+            <div class="card reveal">
+                <h4>Open Source Contributions</h4>
+                <p>Engaging with the community to enhance and contribute to open-source projects.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience & Extra-Curricular -->
+<section id="experience" class="section">
+    <div class="section-content">
+        <h3>Experience & Leadership.</h3>
+        <div class="list-item">
+            <h4>India AI Impact Summit 2026</h4>
+            <p>Attendee & Participant. Explored the future of artificial intelligence, engaging with emerging tech trends and industry leaders.</p>
+        </div>
+        <div class="list-item">
+            <h4>Sharda University</h4>
+            <p>B.Tech in Computer Science and Engineering (2025-2029). Active in campus initiatives and brand ambassadorship programs.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Skills & Ambitions -->
+<section id="about" class="section gray-section">
+    <div class="section-content">
+        <h3>Trajectory.</h3>
+        <p class="large-text">
+            I am a 21-year-old developer based in New Delhi, driven by the intersection of software engineering and artificial intelligence. Currently mastering Python and web technologies, I am committed to building innovative solutions that leverage AI to enhance user experiences. My journey is fueled by a passion for learning, problem-solving, and contributing to the tech community through open-source projects and collaborative initiatives.
+        </p>
+    </div>
+</section>
+
+<!-- Contact -->
+<footer id="contact" class="section footer">
+        <div class="section-content text-center reveal">
+            <h3>Let's Connect.</h3>
+            
+            <div class="contact-links">
+                <!-- Email (Solid Button) -->
+                <a href="mailto:rushaanprof.work@gmail.com" class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    Email
+                </a>
+                
+                <!-- LinkedIn (Outline Button) -->
+                <a href="https://linkedin.com/in/rushaan-s/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    LinkedIn
+                </a>
+                
+                <!-- GitHub (Outline Button) -->
+                <a href="https://github.com/rushaan-spec" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    // Setup the Intersection Observer
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15 // Triggers when 15% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries, obeserver) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // Optional: Stop observing once revealed so it doesn't out and in again
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Target all elements with the 'reveal' class
+    document.querySelectorAll('.reveal').forEach((element) => {
+        observer.observe(element);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+/* --- Global Variable & Reset --- */
+:root {
+    --bg-color: #ffffff;
+    --text-main: #1d1d1f;
+    --text-muted: #86868b;
+    --bg-dark: #000000;
+    --bg-gray: #f5f5f7;
+    --accent: #2997ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: #d2d2d7;
+    color: #1d1d1f;
+}
+
+::-moz-selection {
+    background-color: #d2d2d7;
+    color: #1d1d1f;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Navigation (Frosted Glass Effect) --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    padding:15px 0;
+}
+
+.nav-content {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+/* --- General Sections --- */
+.section {
+    padding: 120px 20px;
+}
+
+.section-content {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.section h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 50px;
+}
+
+/* --- Grid for "Current Focus" --- */
+.dark-section {
+    background-color: var(--bg-dark);
+    color: white;
+}
+
+.dark-section .subtitle {
+    color: #a1a1a6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fir, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #1c1c1e;
+    padding: 40px 30px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #a1a1a6;
+}
+
+/* --- Lists & Text Sections --- */
+.gray-section {
+    background-color: var(--bg-gray);
+}
+
+.list-item {
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 30px;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.list-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.list-item p {
+    font-size: 1.1rem;
+    color: var(text-muted);
+    max-width: 700px;
+}
+
+.large-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    max-width: 800px;
+}
+
+/* --- Footer & Buttons --- */
+.text-center {
+    text-align: center;
+}
+
+.footer {
+    padding: 150px 20px;
+}
+
+.footer h3 {
+    margin-bottom: 30px;
+}
+
+/* New Flexbox container to align the 3 buttons side-by-side */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Adds clean spacing between buttons */
+    flex-wrap: wrap; /* Ensures they stack nestly on mobile phones */
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between the SVG icon and text */
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    padding: 12px 28px;
+    border-radius: 980px; 
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--text-main);
+}
+
+.btn:hover {
+    background-color: #333;
+    border-color: #333;
+    transform: scale(1.02); /* Slight pop effect on hover */
+}
+
+/* New Outline Button style for secondary links */
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-main);
+}
+
+.btn-outline:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Apple-style subtle gray hover */
+    border-color: var(--text-main);
+    color: var(--text-main);
+}
+
+/* --- Scroll Reveal Animations --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px); /* Starts slightly lower */
+    transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); /* Apple-esque smooth easing */
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0); /* Glides into place */
+}
+
+/* Staggered delay for grid cards so they don't appear all at once */
+.grid .card.reveal:nth-child(1) { transition-delay: 0s; }
+.grid .card.reveal:nth-child(2) { transition-delay: 0.15s; }
+.grid .card.reveal:nth-child(3) { transition-delay: 0.3s; }
